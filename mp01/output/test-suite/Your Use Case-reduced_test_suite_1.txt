@@ -1,5 +1,5 @@
 /**
- *	 >>> REDUCED TEST SUITE (Sim with Jaccard Index - Transition Coverage) <<<
+ *	 >>> REDUCED TEST SUITE (Greedy Heuristic - Transition Coverage) <<<
  *
  * - Calculated Maximum Test Case Size: 1
  *
@@ -16,7 +16,7 @@
  */
 
 Test Case: 1
-Precondition: first_condition. second_condition
-system actor does something -> SYSTEM responds to actor
-Postcondition: final condition. other condition
+Precondition: pedido realizado, aguardando entrega
+Usuário do app seleciona opção de cancelamento de pedido -> SYSTEM confirma o cancelamento
+Postcondition: pedido cancelado
 

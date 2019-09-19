@@ -1,10 +1,13 @@
 /*
  * This is an example claret specification
  */
+ 
 systemName "Ifood"
 
 usecase "Realizar pedido" {
-  version "0.1" type "set_type" user "set_user" date "17/09/2019"
+
+  version "0.1" type "criação do caso de uso" user "set_user" date "17/09/2019"
+  version "0.2" type "atualização" user "set_user" date "18/09/2019"
   actor appUser "Usuário do app"
   
   preCondition "Existe uma conexão de rede", "O usuário deve possuir uma conta", "O usuário deve estar logado"
@@ -14,32 +17,31 @@ usecase "Realizar pedido" {
     step 2 system "Mostra a lista com os restaurantes disponíveis"
     step 3 appUser "Escolhe o restaurante desejado" 
     step 4 system "Mostra cardápio do restaurante" ef[3]
-    step 5 appUser "Clica no prato escolhido" 
+    step 5 appUser "Clica no prato escolhido"
     step 6 system "Mostra tela de pagamento" ef[2]
-    step 7 appUser "Escolhe forma de pagamento" 
-    step 8 system "Mostra mensagem de confirmação do pedido" ef[1]
-    step 9 appUser "Acessa menu de acompanhamento de pedido"
-    step 10 system ""
+    step 7 appUser "Escolhe forma de pagamento via cartão" af[5]
+    step 8 system "confirma o pagamento, informa que o pedido será entregue" ef[1]
   }
   
   alternative 1 "Usuário acessa restaurantes favoritos" {
-  	step 1 appUser "Acessa a lista dos restaurantes favoritos"
-    step 2 system "Mostra a lista com os restaurantes favoritos disponíveis"
+  	step 1 appUser "Acessa a lista dos restaurantes favoritos" bs 2
   }
   
   alternative 2 "Usuário acessa lista dos últimos restaurantes onde realizou pedido" {
-  	step 1 appUser "Acessa a lista dos últimos restaurantes onde realizou pedido"
-    step 2 system "Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido"
+  	step 1 appUser "Acessa a lista dos últimos restaurantes onde realizou pedido"  bs 2
   }
   
   alternative 3 "Usuário acessa lista dos últimos pedidos" {
-  	step 1 appUser "Acessa lista dos últimos pedidos feitos"
-  	step 2 system "Mostra tela com os últimos pedidos"
+  	step 1 appUser "Acessa lista dos últimos pedidos feitos"  bs 2
   }
   
   alternative 4 "Usuário cancela pedido" {
   	step 1 appUser "Clica em botão de cancelamento"
   	step 2 system "Mostra mensagem de de sucesso do cancelamento"
+  }
+  
+  alternative 5 "Usuário paga através de dinheiro" {
+  	step 1 appUser "paga com dinheiro" bs 8
   }
 
   exception 1 "Forma de pagamento não autorizada" {
@@ -54,6 +56,5 @@ usecase "Realizar pedido" {
   	step 1 system "Mostra mensagem de restaurante fechado" bs 1
   }
   
-  postCondition ""
+  postCondition "Pedido realizado"
 }
-

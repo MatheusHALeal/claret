@@ -55,31 +55,6 @@ graph
         id 11
         label "11"
     ]
-    node
-    [
-        id 12
-        label "12"
-    ]
-    node
-    [
-        id 13
-        label "13"
-    ]
-    node
-    [
-        id 14
-        label "14"
-    ]
-    node
-    [
-        id 15
-        label "15"
-    ]
-    node
-    [
-        id 16
-        label "16"
-    ]
     edge
     [
         source 1
@@ -126,67 +101,37 @@ graph
     [
         source 8
         target 9
-        label "[s] Usuário do app Escolhe forma de pagamento"
+        label "[s] Usuário do app Escolhe forma de pagamento via cartão"
     ]
     edge
     [
         source 9
         target 10
-        label "[e] system Mostra mensagem de confirmação do pedido"
+        label "[e] system confirma o pagamento, informa que o pedido será entregue"
     ]
     edge
     [
         source 10
         target 11
-        label "[s] Usuário do app Acessa menu de acompanhamento de pedido"
-    ]
-    edge
-    [
-        source 11
-        target 12
-        label "[e] system "
-    ]
-    edge
-    [
-        source 12
-        target 13
-        label "[c] "
+        label "[c] Pedido realizado"
     ]
     edge
     [
         source 2
-        target 14
+        target 3
         label "[s] Usuário do app Acessa a lista dos restaurantes favoritos"
     ]
     edge
     [
-        source 14
-        target 13
-        label "[e] system Mostra a lista com os restaurantes favoritos disponíveis"
-    ]
-    edge
-    [
         source 2
-        target 15
+        target 3
         label "[s] Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido"
     ]
     edge
     [
-        source 15
-        target 13
-        label "[e] system Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido"
-    ]
-    edge
-    [
         source 2
-        target 16
+        target 3
         label "[s] Usuário do app Acessa lista dos últimos pedidos feitos"
-    ]
-    edge
-    [
-        source 16
-        target 13
-        label "[e] system Mostra tela com os últimos pedidos"
     ]
     edge
     [
@@ -199,6 +144,12 @@ graph
         source 7
         target 5
         label "[e] system Mostra mensagem de prato indisponível"
+    ]
+    edge
+    [
+        source 8
+        target 9
+        label "[s] Usuário do app paga com dinheiro"
     ]
     edge
     [

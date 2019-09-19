@@ -1,0 +1,19 @@
+/*
+ * This is an example claret specification
+ */
+systemName "Ifood"
+
+usecase "Your Use Case" {
+  version "0.1" type "set_type" user "set_user" date "set_date"
+  actor appUser "Usuário do app"
+  
+  preCondition "pedido realizado, aguardando entrega"
+  
+  basic {
+    step 1 appUser "seleciona opção de cancelamento de pedido"
+    step 2 system "confirma o cancelamento"
+  }
+  
+  postCondition "pedido cancelado"
+}
+

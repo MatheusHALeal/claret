@@ -1,0 +1,10 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+#
+1 2 [c] pedido realizado, aguardando entrega
+2 3 [s] Usuário do app seleciona opção de cancelamento de pedido
+3 4 [e] system confirma o cancelamento
+4 5 [c] pedido cancelado

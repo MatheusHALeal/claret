@@ -1,203 +1,81 @@
 /**
  *	 >>> REDUCED TEST SUITE (Sim with Jaccard Index - Transition Pair Coverage) <<<
  *
- * - Calculated Maximum Test Case Size: 6
+ * - Calculated Maximum Test Case Size: 5
  *
  * - Equation:
  *
  *     maxTestCaseSize = (b + max(a, e))/2
  * 
  *     where:
- *       b (Total of Basic Flow Steps): 10
+ *       b (Total of Basic Flow Steps): 8
  *       a (Total of Steps from Greater Alternative Flow): 2
  *       e (Total of Steps from Greater Exception Flow): 1
  *
- * - Total of Generated Test Cases: 25
+ * - Total of Generated Test Cases: 8
  */
 
 Test Case: 1
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
 Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app paga com dinheiro -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 2
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
+Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app Escolhe forma de pagamento via cartão -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 3
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
+Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app paga com dinheiro -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 4
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
+Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app paga com dinheiro -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 5
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
+Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app Escolhe forma de pagamento via cartão -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 6
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
 Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
+Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app Escolhe forma de pagamento via cartão -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 7
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes disponíveis
 Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
+Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
+Usuário do app paga com dinheiro -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 
 Test Case: 8
 Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
-
-Test Case: 9
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-
-Test Case: 10
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-
-Test Case: 11
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-
-Test Case: 12
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 13
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
-
-Test Case: 14
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 15
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-
-Test Case: 16
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 17
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 18
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra mensagem de restaurante fechado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra mensagem de prato indisponível
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
-
-Test Case: 19
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
+Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes disponíveis
 Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
 Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
-Usuário do app Escolhe forma de pagamento -> SYSTEM Mostra mensagem de confirmação do pedido
-Usuário do app Acessa menu de acompanhamento de pedido -> SYSTEM 
-Postcondition: 
-
-Test Case: 20
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 21
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
-Usuário do app Escolhe forma de pagamento -> SYSTEM Mostra mensagem de forma de pagamento não autorizada
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
-
-Test Case: 22
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
-Usuário do app Escolhe forma de pagamento -> SYSTEM Mostra mensagem de forma de pagamento não autorizada
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-
-Test Case: 23
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista dos restaurantes favoritos -> SYSTEM Mostra a lista com os restaurantes favoritos disponíveis
-
-Test Case: 24
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista geral de restaurantes -> SYSTEM Mostra a lista com os restaurantes disponíveis
-Usuário do app Escolhe o restaurante desejado -> SYSTEM Mostra cardápio do restaurante
-Usuário do app Clica no prato escolhido -> SYSTEM Mostra tela de pagamento
-Usuário do app Escolhe forma de pagamento -> SYSTEM Mostra mensagem de forma de pagamento não autorizada
-Usuário do app Acessa lista dos últimos pedidos feitos -> SYSTEM Mostra tela com os últimos pedidos
-
-Test Case: 25
-Precondition: Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido -> SYSTEM Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
+Usuário do app Escolhe forma de pagamento via cartão -> SYSTEM confirma o pagamento, informa que o pedido será entregue
+Postcondition: Pedido realizado
 

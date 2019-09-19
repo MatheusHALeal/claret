@@ -26,55 +26,38 @@
 26 26
 27 27
 28 28
-29 29
-30 30
-31 31
-32 32
-33 33
-34 34
-35 35
-36 36
-37 37
 #
-1 17 conditions
-17 2 Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-2 18 steps
-18 3 Usuário do app Acessa a lista geral de restaurantes
-3 19 expected_results
-19 4 system Mostra a lista com os restaurantes disponíveis
-4 20 steps
-20 5 Usuário do app Escolhe o restaurante desejado
-5 21 expected_results
-21 6 system Mostra cardápio do restaurante
-6 22 steps
-22 7 Usuário do app Clica no prato escolhido
-7 23 expected_results
-23 8 system Mostra tela de pagamento
-8 24 steps
-24 9 Usuário do app Escolhe forma de pagamento
-9 25 expected_results
-25 10 system Mostra mensagem de confirmação do pedido
-10 26 steps
-26 11 Usuário do app Acessa menu de acompanhamento de pedido
-11 27 expected_results
-27 12 system 
-12 28 conditions
-28 13 
-2 29 steps
-29 14 Usuário do app Acessa a lista dos restaurantes favoritos
-14 30 expected_results
-30 13 system Mostra a lista com os restaurantes favoritos disponíveis
-2 31 steps
-31 15 Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido
-15 32 expected_results
-32 13 system Mostra a lista com os restaurantes onde o usuário realizou os últimos pedidos pedido
-2 33 steps
-33 16 Usuário do app Acessa lista dos últimos pedidos feitos
-16 34 expected_results
-34 13 system Mostra tela com os últimos pedidos
-5 35 expected_results
-35 2 system Mostra mensagem de restaurante fechado
-7 36 expected_results
-36 5 system Mostra mensagem de prato indisponível
-9 37 expected_results
-37 7 system Mostra mensagem de forma de pagamento não autorizada
+1 12 conditions
+12 2 Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
+2 13 steps
+13 3 Usuário do app Acessa a lista geral de restaurantes
+3 14 expected_results
+14 4 system Mostra a lista com os restaurantes disponíveis
+4 15 steps
+15 5 Usuário do app Escolhe o restaurante desejado
+5 16 expected_results
+16 6 system Mostra cardápio do restaurante
+6 17 steps
+17 7 Usuário do app Clica no prato escolhido
+7 18 expected_results
+18 8 system Mostra tela de pagamento
+8 19 steps
+19 9 Usuário do app Escolhe forma de pagamento via cartão
+9 20 expected_results
+20 10 system confirma o pagamento, informa que o pedido será entregue
+10 21 conditions
+21 11 Pedido realizado
+2 22 steps
+22 3 Usuário do app Acessa a lista dos restaurantes favoritos
+2 23 steps
+23 3 Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido
+2 24 steps
+24 3 Usuário do app Acessa lista dos últimos pedidos feitos
+5 25 expected_results
+25 2 system Mostra mensagem de restaurante fechado
+7 26 expected_results
+26 5 system Mostra mensagem de prato indisponível
+8 27 steps
+27 9 Usuário do app paga com dinheiro
+9 28 expected_results
+28 7 system Mostra mensagem de forma de pagamento não autorizada

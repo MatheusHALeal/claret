@@ -29,24 +29,24 @@ graph
     [
         source 1
         target 2
-        label "[c] first_condition. second_condition"
+        label "[c] pedido realizado, aguardando entrega"
     ]
     edge
     [
         source 2
         target 3
-        label "[s] system actor does something"
+        label "[s] Usuário do app seleciona opção de cancelamento de pedido"
     ]
     edge
     [
         source 3
         target 4
-        label "[e] system responds to actor"
+        label "[e] system confirma o cancelamento"
     ]
     edge
     [
         source 4
         target 5
-        label "[c] final condition. other condition"
+        label "[c] pedido cancelado"
     ]
 ]
