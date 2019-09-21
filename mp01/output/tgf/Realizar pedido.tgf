@@ -9,21 +9,33 @@
 9 9
 10 10
 11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
 #
 1 2 [c] Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
 2 3 [s] Usuário do app Acessa a lista geral de restaurantes
-3 4 [e] system Mostra a lista com os restaurantes disponíveis
+3 4 [e] system Mostra a lista com todos os restaurantes
 4 5 [s] Usuário do app Escolhe o restaurante desejado
 5 6 [e] system Mostra cardápio do restaurante
 6 7 [s] Usuário do app Clica no prato escolhido
 7 8 [e] system Mostra tela de pagamento
 8 9 [s] Usuário do app Escolhe forma de pagamento via cartão
-9 10 [e] system confirma o pagamento, informa que o pedido será entregue
-10 11 [c] Pedido realizado
+9 10 [e] system Confirma o pagamento e exibe tela de confirmação de endereço
+10 11 [s] Usuário do app Confirma endereço
+11 12 [e] system Exibe tela de pedido realizado com sucesso
+12 13 [c] Pedido realizado
 2 3 [s] Usuário do app Acessa a lista dos restaurantes favoritos
+2 14 [s] Usuário do app Acessa lista dos últimos pedidos feitos
+14 15 [e] system Mostra a lista dos últimos pedidos feitos
+15 7 [s] Usuário do app Clica no prato escolhido
 2 3 [s] Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido
-2 3 [s] Usuário do app Acessa lista dos últimos pedidos feitos
 5 2 [e] system Mostra mensagem de restaurante fechado
 7 5 [e] system Mostra mensagem de prato indisponível
-8 9 [s] Usuário do app paga com dinheiro
+8 16 [s] Usuário do app Paga com dinheiro
+16 17 [e] system Confirma o pagamento e exibe tela de confirmação de endereço
+17 11 [s] Usuário do app Confirma endereço
 9 7 [e] system Mostra mensagem de forma de pagamento não autorizada

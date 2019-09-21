@@ -26,38 +26,62 @@
 26 26
 27 27
 28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
 #
-1 12 conditions
-12 2 Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
-2 13 steps
-13 3 Usuário do app Acessa a lista geral de restaurantes
-3 14 expected_results
-14 4 system Mostra a lista com os restaurantes disponíveis
-4 15 steps
-15 5 Usuário do app Escolhe o restaurante desejado
-5 16 expected_results
-16 6 system Mostra cardápio do restaurante
-6 17 steps
-17 7 Usuário do app Clica no prato escolhido
-7 18 expected_results
-18 8 system Mostra tela de pagamento
-8 19 steps
-19 9 Usuário do app Escolhe forma de pagamento via cartão
-9 20 expected_results
-20 10 system confirma o pagamento, informa que o pedido será entregue
-10 21 conditions
-21 11 Pedido realizado
-2 22 steps
-22 3 Usuário do app Acessa a lista dos restaurantes favoritos
-2 23 steps
-23 3 Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido
-2 24 steps
-24 3 Usuário do app Acessa lista dos últimos pedidos feitos
-5 25 expected_results
-25 2 system Mostra mensagem de restaurante fechado
-7 26 expected_results
-26 5 system Mostra mensagem de prato indisponível
-8 27 steps
-27 9 Usuário do app paga com dinheiro
-9 28 expected_results
-28 7 system Mostra mensagem de forma de pagamento não autorizada
+1 18 conditions
+18 2 Existe uma conexão de rede. O usuário deve possuir uma conta. O usuário deve estar logado
+2 19 steps
+19 3 Usuário do app Acessa a lista geral de restaurantes
+3 20 expected_results
+20 4 system Mostra a lista com todos os restaurantes
+4 21 steps
+21 5 Usuário do app Escolhe o restaurante desejado
+5 22 expected_results
+22 6 system Mostra cardápio do restaurante
+6 23 steps
+23 7 Usuário do app Clica no prato escolhido
+7 24 expected_results
+24 8 system Mostra tela de pagamento
+8 25 steps
+25 9 Usuário do app Escolhe forma de pagamento via cartão
+9 26 expected_results
+26 10 system Confirma o pagamento e exibe tela de confirmação de endereço
+10 27 steps
+27 11 Usuário do app Confirma endereço
+11 28 expected_results
+28 12 system Exibe tela de pedido realizado com sucesso
+12 29 conditions
+29 13 Pedido realizado
+2 30 steps
+30 3 Usuário do app Acessa a lista dos restaurantes favoritos
+2 31 steps
+31 14 Usuário do app Acessa lista dos últimos pedidos feitos
+14 32 expected_results
+32 15 system Mostra a lista dos últimos pedidos feitos
+15 33 steps
+33 7 Usuário do app Clica no prato escolhido
+2 34 steps
+34 3 Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido
+5 35 expected_results
+35 2 system Mostra mensagem de restaurante fechado
+7 36 expected_results
+36 5 system Mostra mensagem de prato indisponível
+8 37 steps
+37 16 Usuário do app Paga com dinheiro
+16 38 expected_results
+38 17 system Confirma o pagamento e exibe tela de confirmação de endereço
+17 39 steps
+39 11 Usuário do app Confirma endereço
+9 40 expected_results
+40 7 system Mostra mensagem de forma de pagamento não autorizada

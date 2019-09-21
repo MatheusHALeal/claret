@@ -55,6 +55,36 @@ graph
         id 11
         label "11"
     ]
+    node
+    [
+        id 12
+        label "12"
+    ]
+    node
+    [
+        id 13
+        label "13"
+    ]
+    node
+    [
+        id 14
+        label "14"
+    ]
+    node
+    [
+        id 15
+        label "15"
+    ]
+    node
+    [
+        id 16
+        label "16"
+    ]
+    node
+    [
+        id 17
+        label "17"
+    ]
     edge
     [
         source 1
@@ -71,7 +101,7 @@ graph
     [
         source 3
         target 4
-        label "[e] system Mostra a lista com os restaurantes disponíveis"
+        label "[e] system Mostra a lista com todos os restaurantes"
     ]
     edge
     [
@@ -107,12 +137,24 @@ graph
     [
         source 9
         target 10
-        label "[e] system confirma o pagamento, informa que o pedido será entregue"
+        label "[e] system Confirma o pagamento e exibe tela de confirmação de endereço"
     ]
     edge
     [
         source 10
         target 11
+        label "[s] Usuário do app Confirma endereço"
+    ]
+    edge
+    [
+        source 11
+        target 12
+        label "[e] system Exibe tela de pedido realizado com sucesso"
+    ]
+    edge
+    [
+        source 12
+        target 13
         label "[c] Pedido realizado"
     ]
     edge
@@ -124,14 +166,26 @@ graph
     edge
     [
         source 2
-        target 3
-        label "[s] Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido"
+        target 14
+        label "[s] Usuário do app Acessa lista dos últimos pedidos feitos"
+    ]
+    edge
+    [
+        source 14
+        target 15
+        label "[e] system Mostra a lista dos últimos pedidos feitos"
+    ]
+    edge
+    [
+        source 15
+        target 7
+        label "[s] Usuário do app Clica no prato escolhido"
     ]
     edge
     [
         source 2
         target 3
-        label "[s] Usuário do app Acessa lista dos últimos pedidos feitos"
+        label "[s] Usuário do app Acessa a lista dos últimos restaurantes onde realizou pedido"
     ]
     edge
     [
@@ -148,8 +202,20 @@ graph
     edge
     [
         source 8
-        target 9
-        label "[s] Usuário do app paga com dinheiro"
+        target 16
+        label "[s] Usuário do app Paga com dinheiro"
+    ]
+    edge
+    [
+        source 16
+        target 17
+        label "[e] system Confirma o pagamento e exibe tela de confirmação de endereço"
+    ]
+    edge
+    [
+        source 17
+        target 11
+        label "[s] Usuário do app Confirma endereço"
     ]
     edge
     [
